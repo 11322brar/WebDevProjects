@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightSpark</title>
+    <link rel="shortcut icon" href="images/StudySyn.svg" type="image/x-icon">
+    <link rel="stylesheet" href="IS-Style.css">
+</head>
+
+<body>
+    <div id="main-container">
+
+        <header id="header-container">
+
+            <div id="header-logo">
+                <a href="#"><img src="images/StudySyn.svg" alt="Website Logo"></a>
+                <a href="#">InsightSpark</a>
+            </div>
+
+            <div id="nav">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#">About</a>
+            </div>
+
+            <a id="contact-button" href="#">
+                Contact Us
+            </a>
+
+            <button id="nav-menu-button">
+                <img id="menu-button-image" src="images/Hamburger.svg" alt="Menu button">
+            </button>
+
+        </header>
+
+        <section id="hero-section">
+            <section id="hero-left-section">
+                <p id="hls-label">Very Proud to introduce</p>
+                <h1 id="hls-heading">Seamless Learning for Brighter Futures</h1>
+                <p id="hls-description">Our innovative platform offers an effortless and seamless approach to
+                    learning,
+                    empowering students of all ages to achieve brighter futures. Join us on a transformative journey
+                    to
+                    simplify education and unlock your full potential.
+                </p>
+                <div id="hls-buttons">
+                    <a id="startnow-button" href="#">
+                        Start now
+                    </a>
+                    <a id="taketour-button" href="#">
+                        Take tour
+                    </a>
+                </div>
+            </section>
+
+            <section id="hero-right-section">
+                <img id="hrs-image" src="images/hero-image.jpg" alt="random main image">
+            </section>
+            
+        </section>
+
+        <section id="trusted-by-container">
+            <h2 id="trusted-heading">Trusted by the best</h2>
+            <div id="trusted-by-grid">
+                <div class="company-info">
+                    <img src="images/Google.svg" alt="Google logo">
+                    <p>Google</p>
+                </div>
+                <div class="company-info">
+                    <img src="./images/Microsoft.svg" alt="Microsoft Logo">
+                    <p>Microsoft</p>
+                </div>
+                <div class="company-info">
+                    <img src="./images/linkedin.svg" alt="Linkedin Logo">
+                    <p>LinkedIn</p>
+                </div>
+                <div class="company-info">
+                    <img src="images/VectorEdu.svg" VectorEdu Logo />
+                    <p>VectorEdu</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cards-container">
+
+            <header id="cards-header">
+                <h2 id="cards-main-heading">Our Competitive Advantage</h2>
+                <p id="cards-text">This is a section of some simple filler text, also known as placeholder text. It
+                    shares some characteristics of real written text but is random or otherwise generated.
+                </p>
+            </header>
+
+            <div id="cards-grid-container">
+                <!-- card1 -->
+                <div class="cards" id="card1">
+                    <div class="cards-image-container"><img class="cards-images" src="./images/PersonalizedLearn.svg" />
+                    </div>
+                    <h3 class="cards-heading">Personalized Learning </h3>
+                    <p>Offer tailored learning experiences through AI and machine learning to cater to individual
+                        student needs.</p>
+                </div>
+
+                <!-- card2 -->
+                <div class="cards" id="card2">
+                    <div class="cards-image-container"><img class="cards-images" src="./images/Affordability.svg" />
+                    </div>
+                    <h3 class="cards-heading"> Affordability</h3>
+                    <p> Provide high-quality education at an affordable price
+                        point, making
+                        it accessible to a broader audience.
+                    </p>
+                </div>
+
+                <!-- card3 -->
+                <div class="cards" id="card3">
+                    <div class="cards-image-container"><img class="cards-images" src="./images/IndustryPatner.svg" />
+                    </div>
+                    <h3 class="cards-heading">Industry Partnerships </h3>
+                    <p> Collaborate with well-known companies and
+                        institutions to
+                        offer accredited courses and certifications, adding credibility to your offerings.
+                    </p>
+                </div>
+
+                <!-- card4 -->
+                <div class="cards" id="card4">
+                    <div class="cards-image-container"><img class="cards-images" src="./images/InnovativeTech.svg" />
+                    </div>
+                    <h3 class="cards-heading"> Innovative Technology</h3>
+                    <p> Utilize cutting-edge technology, such as
+                        augmented reality
+                        or virtual reality, to create immersive learning experiences.
+                    </p>
+                </div>
+
+                <!-- card5 -->
+                <div class="cards" id="card5">
+                    <div class="cards-image-container"><img class="cards-images" src="images/Responsive.svg" />
+                    </div>
+                    <h3 class="cards-heading"> Responsive Support</h3>
+                    <p> Provide exceptional customer support and assistance
+                        to students
+                        and educators.
+                    </p>
+                </div>
+
+                <!-- card6 -->
+                <div class="cards" id="card6">
+                    <div class="cards-image-container"><img class="cards-images" src="./images/Analytics.svg" />
+                    </div>
+
+                    <h3 class="cards-heading">Analytics and Insights </h3>
+                    <p> Offer detailed progress tracking and analytics
+                        to help
+                        students and teachers monitor performance and make data-driven decisions.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="testimonial-container">
+            <h2 id="test-heading">What Others Say About Us</h2>
+            <div id="test-grid-container">
+
+                <!-- card1 -->
+                <div class="test-card">
+                    <p class="test-text"> “InsightSpark revolutionized my classroom! Engaging content and teacher
+                        resources
+                        make learning enjoyable. Highly recommended for mentors.”
+                    </p>
+                    <img class="test-image" src="./images/sarahjohnson.jfif" />
+                    <div class="test-person-info">
+                        <p class="test-person-name">Sarah Johnson</p>
+                        <p class="test-person-job">8th Grade English Teacher</p>
+                    </div>
+                </div>
+
+                <!-- card2 -->
+                <div class="test-card">
+                    <p class="test-text"> "InsightSpark is a lifesaver for parents. It provides a safe and engaging
+                        learning environment with progress tracking for monitoring our children's learning."
+                    </p>
+                    <img class="test-image" src="images/markdavis.jpeg" />
+                    <div class="test-person-info">
+                        <p class="test-person-name">Mark Davis</p>
+                        <p class="test-person-job">Parent</p>
+                    </div>
+                </div>
+
+                <!-- card3 -->
+                <div class="test-card">
+                    <p class="test-text"> "InsightSpark, a true game-changer! Flexible content, tailored assessments,
+                        and excellent support. Integral to our school district's success."
+                    </p>
+                    <img class="test-image" src="./images/jamescarter.jfif" />
+                    <div class="test-person-info">
+                        <p class="test-person-name">Dr. James Carter</p>
+                        <p class="test-person-job">School Administration</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="newsletter-container">
+            <section id="news-left-section">
+                <img src="images/img.png" alt="">
+            </section>
+
+            <section id="news-right-section">
+                <h2 id="news-heading">Get the latest updates</h2>
+                <p id="news-heading-desc">Sign up for our newsletter</p>
+                <form> <input id="news-email" type="email" placeholder="Email">
+                    <button id="news-button" type="submit">Send</button>
+                </form>
+
+                <div id="news-bottom-text">
+                    By signing up to our newsletter you agree to our
+                    <a class="news-links" href="#">
+                        Terms of Servive
+                    </a>
+                    and
+                    <a class="news-links" href="#">
+                        Privacy Policy
+                    </a>
+                    .
+                </div>
+
+            </section>
+
+        </section>
+
+        <section id="footer-container">
+
+            <section id="footer-left-container">
+
+                <div id="footer-logo-container">
+                    <a href="#">
+                        <img src="images/StudySyn.svg" alt="Website Logo">
+                    </a>
+                    <a id="footer-logo-heading" href="#">InsightSpark</a>
+                </div>
+
+                <p id="footer-logo-description">Seamless Learning for Brighter Futures.</p>
+
+                <div id="footer-icons-container">
+
+                    <a href="https://instagram.com/">
+                        <img class="footer-icons" src="images/instagram.svg"  loading="lazy" alt="instagram logo">
+                    </a>
+                    <a href="https://twitter.com/"><img class="footer-icons" src="images/twitter.svg" loading="lazy"
+                            alt="twitter logo">
+                    </a>
+                    <a href="https://linkedin.com/"><img class="footer-icons" src="images/linkedin.svg" loading="lazy"
+                            alt="Linkedin logo">
+                    </a>
+                    <a href="https://github.com/"><img class="footer-icons" src="images/github.svg" loading="lazy" alt="github logo">
+                    </a>
+
+                </div>
+
+            </section>
+
+            <section id="footer-right-container">
+
+                <ul class="footer-links-lists">
+                    <li>
+                        <h3>Products</h3>
+                    </li>
+                    <li>Overview</li>
+                    <li>Solutions</li>
+                    <li>Pricing</li>
+                    <li>Customers</li>
+                </ul>
+
+                <ul class="footer-links-lists">
+                    <li>
+                        <h3>Company</h3>
+                    </li>
+                    <li>About</li>
+                    <li>Investor Relations</li>
+                    <li>Jobs</li>
+                    <li>Press</li>
+                    <li>Blog</li>
+                </ul>
+
+                <ul class="footer-links-lists">
+                    <li>
+                        <h3>Support</h3>
+                    </li>
+                    <li>Contact</li>
+                    <li>Documentation</li>
+                    <li>Chat</li>
+                    <li>FAQ</li>
+                </ul>
+
+                <ul class="footer-links-lists">
+                    <li>
+                        <h3>Legal</h3>
+                    </li>
+                    <li>Terms of Service</li>
+                    <li>Privacy Policy</li>
+                    <li>Cookie Settings</li>
+                </ul>
+
+            </section>
+
+        </section>
+
+        <section id="bottom-container">
+            <span id="bottom-text">&#169; 2021 - Present. InsightSpark All Rights
+                Reserved.
+            </span>
+        </section>
+
+    </div>
+</body>
+
+</html>
+
+<!-- hero image wierd behavior sizing down  due to trusted by-->
+<!-- /* #hero-right-section {
+    height: 200%;
+    justify-content: center;
+    
+} */
+
+#hrs-image {
+    width: 60%;
+    height: 100%;
+} -->
+<!-- 
+/* .test-person-info:nth-child(1) {
+    color: var(--accent-color);
+} */ -->

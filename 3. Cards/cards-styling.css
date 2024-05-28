@@ -1,0 +1,178 @@
+/* main css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-image: linear-gradient(62deg, #c9e3fb 0%, #ecd8ff 100%);
+}
+
+#main-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:20px;
+    padding: 20px;
+}
+
+#card1-container,
+#card2-container {
+    height: 300px;
+    width: 200px;
+    border-radius: 12px;
+    background-color: #f9f4fe;
+    position: relative;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* card1 css */
+#card1-image {
+    height: 200px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+
+#card1-text h2 {
+    font-size: 0.8rem;
+    padding: 0px 8px;
+    z-index: 1;
+    position: absolute;
+    top: 190px;
+}
+
+#card1-text p {
+    font-size: 0.8rem;
+    padding: 0px 8px;
+    position: absolute;
+    top: 224px;
+}
+
+/* card2 css */
+#card2-image {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+#card2-text h2 {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+#card2-text ul {
+    padding: 5px 20px;
+    text-align: center;
+}
+
+#card2-container ul,
+p,
+a {
+    font-size: 0.6rem;
+    list-style: none;
+}
+
+#plan-selector,
+#payment-button {
+    height: 35px;
+    width: 170px;
+    border-radius: 5px;
+}
+
+#plan-selector {
+    background-color: #a5d5fc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+#selected-plan img {
+    height: 30px;
+}
+
+#selected-plan {
+    display: flex;
+
+}
+
+#selected-plan-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#payment-button {
+    background-color: #004f65;
+    box-shadow: 7px 5px 12px hsl(0deg 0% 0% / 0.25);
+    height: 32px;
+}
+
+#payment-button p {
+    color: white;
+    text-align: center;
+}
+
+#cancel-order {
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* card3 css */
+#card3-container {
+    height: 200px;
+    width: 400px;
+    border-radius: 12px;
+    background-color: #f9f4fe;
+    box-shadow: 8.0px 16.0px 16.0px hsl(0deg 0% 0% / 0.25);
+    display: flex;
+}
+
+#card3-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: -66px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+
+#card3-textbox {
+    background-color: #120c43;
+    background-image: linear-gradient(49deg, #120c43 0%, #3f0b7e 69%);
+    padding: 10px 25px;
+    color: rgb(255, 255, 255);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#card3-textbox h2,h3 {
+    font-size: 0.8rem;
+}
+
+#card3-textbox p {
+    font-size: 0.5rem;
+}
+
+#bottom-metrics {
+    display: flex;
+    justify-content: space-between;
+}

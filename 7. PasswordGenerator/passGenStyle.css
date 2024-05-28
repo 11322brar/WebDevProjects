@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#main-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #485563;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29323c, #485563);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #29323c, #485563);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+
+#generator-container {
+    width: 26rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+    background: #8e9eab;
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+}
+
+#heading {
+    font-size: 1.3rem;
+}
+
+#password-container {
+    width: 100%;
+    padding: 1rem 2rem 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.1rem;
+}
+
+
+#generated-password {
+    width: 80%;
+    font-size: 1rem;
+    background-color: transparent;
+    padding: 0.1rem 0.3rem;
+    border: none;
+    border-bottom: 0.01rem solid black;
+}
+
+#strenght-indicator {
+    border-radius: 50%;
+    width: 1.8rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+
+.red-indicator {
+    background-color: #ff6161;
+    box-shadow: 0 0 0.2rem #ff6161, inset 0 0 0.2rem #ff6161;
+}
+
+.yellow-indicator {
+    background-color: #ffe761;
+    box-shadow: 0 0 0.2rem #ffe761, inset 0 0 0.2rem #ffe761;
+}
+
+.green-indicator {
+    background-color: #7eff61;
+    box-shadow: 0 0 0.2rem #7eff61, inset 0 0 0.2rem #7eff61;
+}
+
+.dark-green-indicator {
+    background-color: #1b9400;
+    box-shadow: 0 0 0.2rem #1b9400, inset 0 0 0.2rem #1b9400;
+}
+
+.icons {
+    height: 1.2rem;
+    margin-left: 1rem;
+}
+
+.icons:active {
+    transform: scale(0.96);
+}
+
+#prefrences {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#password-length {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 0.5rem 0.2rem 0rem;
+    font-size: 1rem;
+}
+
+/* 
+#length-slider {
+    height: 2rem;
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+#length-slider::-webkit-slider-runnable-track {
+    height: 3px;
+    cursor: pointer;
+    background: #404040;
+    background-size: 30% 100%;
+    border-radius: 5px;
+}
+
+#length-slider::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #000000;
+    height: 32px;
+    width: 11px;
+    border-radius: 7px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -15.5px;
+} */
+
+#checkboxes-container {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.5rem 2rem;
+}
+
+.checkboxes {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem
+}
+
+.checkboxes:active {
+    transform: scale(0.96);
+}
+
+#generate-button {
+    font-size: 1rem;
+}
+
+
+
+
+/* === range theme and appearance === */
+#length-slider {
+    font-size: 1.5rem;
+    width: 12.5em;
+}
+
+#length-slider {
+    --thumb-height: 1.125em;
+    --track-height: 0.125em;
+    --track-color: rgba(0, 0, 0, 0.2);
+    --brightness-hover: 180%;
+    --brightness-down: 80%;
+    --clip-edges: 0.125em;
+    color: #2b2d42;
+    --thumb-height: 1.375em;
+    --thumb-width: 0.5em;
+    --clip-edges: 0.0125em;
+    color: #3a86ff;
+    position: relative;
+    background: #fff0;
+    overflow: hidden;
+}
+
+
+#length-slider:active {
+    cursor: grabbing;
+}
+
+/* === WebKit specific styles === */
+#length-slider,
+#length-slider::-webkit-slider-runnable-track,
+#length-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    transition: all ease 100ms;
+    height: var(--thumb-height);
+}
+
+#length-slider::-webkit-slider-runnable-track,
+#length-slider::-webkit-slider-thumb {
+    position: relative;
+}
+
+#length-slider::-webkit-slider-thumb {
+    --thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
+    --clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
+    --clip-bottom: calc(var(--thumb-height) - var(--clip-top));
+    --clip-further: calc(100% + 1px);
+    --box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0 100vmax currentColor;
+
+    width: var(--thumb-width, var(--thumb-height));
+    background: linear-gradient(currentColor 0 0) scroll no-repeat left center / 50% calc(var(--track-height) + 1px);
+    background-color: currentColor;
+    box-shadow: var(--box-fill);
+    border-radius: var(--thumb-width, var(--thumb-height));
+
+    filter: brightness(100%);
+    clip-path: polygon(100% -1px,
+            var(--clip-edges) -1px,
+            0 var(--clip-top),
+            -100vmax var(--clip-top),
+            -100vmax var(--clip-bottom),
+            0 var(--clip-bottom),
+            var(--clip-edges) 100%,
+            var(--clip-further) var(--clip-further));
+}
+
+
+#length-slider:active::-webkit-slider-thumb {
+    filter: brightness(var(--brightness-down));
+    cursor: grabbing;
+}
+
+#length-slider:hover::-webkit-slider-thumb {
+    cursor: grab;
+}

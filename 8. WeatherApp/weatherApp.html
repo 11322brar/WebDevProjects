@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weatherAppStyle.css">
+</head>
+
+
+<!-- https://api.openweathermap.org/data/3.0/onecall?lat=30.824520&lon=75.208649&exclude={part}&appid=d7a2f3f757b65666d58043b96c4e6209&units=metric
+
+
+http://api.openweathermap.org/geo/1.0/reverse?lat=30.824520&lon=75.208649&limit=1&appidd7a2f3f757b65666d58043b96c4e6209
+
+
+if no input in city name
+
+
+red border timeout
+
+print loading
+
+curswer to typer
+search for city placeholder
+when typing make an outline -->
+
+
+
+<body>
+    <!-- NOTE: Location doesn't work due to chrome restrictions. Add url to "chrome://flags/#unsafely-treat-insecure-origin-as-secure" to give it required permissions. -->
+
+    <section id="main-container">
+
+        <section id="left-container">
+
+            <div id="location-input-container">
+                <div id="search-bar-container">
+                    <input type="text" id="search-input" autocomplete="off">
+                    <img id="search-icon" src="media/search-icon.svg">
+                </div>
+                <img id="location-button-image-left" class="slide-in-fwd-center" src="media/location.svg" alt="">
+            </div>
+
+
+
+            <!-- After Load State -->
+            <div id="left-data-container">
+                <img id="weather-description-image" src="media/icons/unknown.png">
+                <h3 id="weather-description">Weather</h3>
+                <h2 id="main-temperature">0°C</h2>
+                <div id="seperator-line"></div>
+                <p id="date">MM-DD-YYYY</p>
+                <p id="day">Day</p>
+                <p id="time">HH:MM </p>
+                <p id="city-country">City, Country</p>
+            </div>
+
+
+        </section>
+
+        <section id="right-container">
+
+            <div id="right-container-heading">Today</div>
+            <!-- default state -->
+            <dic id="location-input-container-right">
+                <img id="location-button-image-right" src="media/location.svg" alt="">
+                            <p>My Location weather</p>
+            </dic>
+
+            <!-- error state -->
+            <div id="error-container">
+                <img id="error-image" src="media/error-cloud.svg" alt="">
+                <p id="error-message">Error!</p>
+            </div>
+
+            <!-- loading state -->
+            <div id="loading-animation"></div>
+
+            <!-- After Load State -->
+            <div id="cards-grid-container">
+                <!-- card1 -->
+                <div class="info-cards" id="temperature-card">
+                    <h3 class="card-headings">Temperature</h3>
+                    <div id="temperature-card-grid" class="card-grids">
+                        <span>Max</span>
+                        <p id="max-temperature">100°C</p>
+                        <span>Min</span>
+                        <p id="min-temperature">0°C</p>
+                    </div>
+                </div>
+                <!-- card2 -->
+                <div class="info-cards" id="real-feel-card">
+                    <h3 class="card-headings">Real-feel</h3>
+                    <p id="real-feel">0°C</p>
+                </div>
+                <!-- card3 -->
+                <div class="info-cards" id="sun-card">
+                    <h3 class="card-headings">Sun</h3>
+                    <div id="sun-card-grid" class="card-grids">
+                        <span>Rise</span>
+                        <p id="sun-rise">0:00 AM</p>
+                        <span>Set</span>
+                        <p id="sun-set">0:00 AM</p>
+                    </div>
+                </div>
+                <!-- card4 -->
+                <div class="info-cards" id="humidity-card">
+                    <h3 class="card-headings">Humidity</h3>
+                    <p id="humidity">0%</p>
+                </div>
+                <!-- card5 -->
+                <div class="info-cards" id="wind-card">
+                    <h3 class="card-headings">Wind</h3>
+                    <div id="wind-card-grid" class="card-grids">
+                        <span>Speed</span>
+                        <p id="wind-speed">0 km/h</p>
+                        <span> Degree</span>
+                        <p id="wind-degree">0°</p>
+                    </div>
+                </div>
+                <!-- card6 -->
+                <div class="info-cards" id="pressure-card">
+                    <h3 class="card-headings">Pressure</h3>
+                    <p id="pressure">0 mb</p>
+                </div>
+
+
+            </div>
+
+            <div id="right-container-footer">All Data Provided By <span id="company-name">OpenWeather</span>
+                <p id="company-slogan">Weather forecasts, nowcasts and history in a fast and elegant way.</p>
+            </div>
+
+        </section>
+
+    </section>
+
+    <script src="weatherAppLogic.js"></script>
+</body>
+
+</html>
