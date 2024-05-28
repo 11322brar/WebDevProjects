@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.img-white-arrow{background:url('./media/white-long-arrow.png')}
+.img-grey-arrow{background:url('./media/grey-long-arrow.png')}
+
+
+
+
+
+
+
+
+
+
+
+/* search bar animation */
+#slideup-animation-list li{
+    animation: 20s ease-in-out 0s infinite slide-up;
+}
+@keyframes slide-up {
+    0%,14%{
+        transform: translateY(0%);
+    }
+    15%,29%{
+        transform: translateY(-100%);
+    }
+    30%,44%{
+        transform: translateY(-200%);
+    }
+    45%,59%{
+        transform: translateY(-300%);
+    }
+    60%,74%{
+        transform: translateY(-400%);
+    } 
+    75%,100%{
+        transform: translateY(0%);
+    } 
+}
+
+/* hero section cards horizontal animation */
+#hero-section-animation li{
+    animation: 20s ease-in-out 0s infinite slide-left;
+    animation-direction: alternate;
+}
+@keyframes slide-left {
+    0%,32%{
+        transform: translateX(0%);
+    }
+    33%,65%{
+        transform: translateX(-100%);
+    }
+    66%,100%{
+        transform: translateX(-200%);
+    }
+}
+
+/* companies horizontal animation */
+#horizontal-scroll-companies-animation{
+    animation: 60s linear 0s infinite slide-horizontal;
+    /* animation-direction: alternate; */
+}
+
+@keyframes slide-horizontal {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
