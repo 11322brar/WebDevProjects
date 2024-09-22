@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    overflow-x: none;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+
+#main-container {
+    display: flex;
+    position: relative;
+    top: 100px;
+    justify-content: end;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+#data-container {
+    padding: 0 3rem;
+    width: 50%;
+    /* border: 2px solid black; */
+    text-align: left;
+}
+
+h1 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+#new-price {
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+#old-price {
+    opacity: 0.8;
+    font-size: 1.2rem;
+    text-decoration: line-through;
+}
+
+/* ------------------------------ */
+/* description and details part */
+#radio-buttons {
+    margin: 1.4rem 0;
+}
+
+/* hiding circle radio buttons */
+#details-radio,
+#description-radio {
+    position: absolute;
+    visibility: hidden;
+}
+
+/* both labels */
+#details-radio+label,
+#description-radio+label {
+    margin-right: 1rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+/* by default description button will be checked */
+/* if button checked, what to do on label */
+#details-radio:checked+label,
+#description-radio:checked+label {
+    opacity: 1;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+/* if button NOT checked, what to do on label */
+#details-radio:not(:checked)+label,
+#description-radio:not(:checked)+label {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#details-radio:not(:checked):hover+label,
+#description-radio:not(:checked):hover+label {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* hiding both texts, the one selected will be shown afterwards */
+.texts {
+    position: absolute;
+    margin: 1.2rem 0;
+    visibility: hidden;
+    font-weight: 400;
+}
+
+/* if any button checked, what text to show */
+#description-radio:checked~#description-text {
+    position: relative;
+    visibility: visible;
+}
+
+#details-radio:checked~#details-text {
+    position: relative;
+    visibility: visible;
+}
+
+#details-text {
+    display: flex;
+    gap: 1rem;
+}
+
+.big-text {
+    font-size: 2rem;
+}
+
+/* -------------------------------- */
+/* choose color text */
+h3 {
+    margin-bottom: 1rem;
+    font-size: 1.18rem;
+    font-weight: 600;
+}
+
+.color-radio-buttons {
+    position: absolute;
+    visibility: hidden;
+}
+
+.color-boxes {
+    display: inline-block;
+    margin-right: 0.4rem;
+    border: none;
+    border-radius: 4px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
+    cursor: pointer;
+    background-size: cover;
+}
+
+.color-radio-buttons:checked+label {
+    border: 1.5px solid #434343;
+    transform: scale(1.1);
+}
+
+.backgrounds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0;
+    background-image: linear-gradient(196deg, #f1a9a9, #e66767);
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 0.8s ease-out;
+}
+
+#background-1 {
+    background-image: linear-gradient(196deg, #f1a9a9, #e66767);
+}
+
+#background-2 {
+    background-image: linear-gradient(196deg, #4c4c4c, #262626);
+}
+
+#background-3 {
+    background-image: linear-gradient(196deg, #8a9fb2, #5f7991);
+}
+
+#background-4 {
+    background-image: linear-gradient(196deg, #97afc3, #6789a7);
+}
+
+#background-5 {
+    background-image: linear-gradient(196deg, #afa6a0, #8c7f76);
+}
+
+#background-6 {
+    background-image: linear-gradient(196deg, #aaadac, #838786);
+}
+
+/* Ensure only the selected background is visible and above others */
+#color-radio-button-1:checked~#background-1,
+#color-radio-button-2:checked~#background-2,
+#color-radio-button-3:checked~#background-3,
+#color-radio-button-4:checked~#background-4,
+#color-radio-button-5:checked~#background-5,
+#color-radio-button-6:checked~#background-6 {
+    opacity: 1;
+}
+
+#color-box-1 {
+    background-image: url(media/color1.jpg);
+}
+
+#color-box-2 {
+    background-image: url(media/color2.jpg);
+}
+
+#color-box-3 {
+    background-image: url(media/color3.jpg);
+}
+
+#color-box-4 {
+    background-image: url(media/color4.jpg);
+}
+
+#color-box-5 {
+    background-image: url(media/color5.jpg);
+}
+
+#color-box-6 {
+    background-image: url(media/color6.jpg);
+}
+
+/* --------------------------- */
+#add-to-cart-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    border-radius: 4px;
+    background-color: #944852;
+    width: 210px;
+    height: 48px;
+    box-shadow: 0 6px 15px 0 rgba(16, 39, 112, 0.15);
+    transition: background-color 0.7s ease-out;
+}
+
+#add-to-cart-button img {
+    height: 1.3rem;
+    color: white;
+}
+
+#add-to-cart-button p {
+    color: white;
+    text-decoration: none;
+}
+
+#add-to-cart-button:hover {
+    background-color: #333;
+    box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
+}
+
+#color-radio-button-1:checked~#add-to-cart-button {
+    background-color: #944852;
+}
+
+#color-radio-button-2:checked~#add-to-cart-button {
+    background-color: #1a1a1a;
+}
+
+#color-radio-button-3:checked~#add-to-cart-button {
+    background-color: #40566e;
+}
+
+#color-radio-button-4:checked~#add-to-cart-button {
+    background-color: #5e89b2;
+}
+
+#color-radio-button-5:checked~#add-to-cart-button {
+    background-color: #8c7f76;
+}
+
+#color-radio-button-6:checked~#add-to-cart-button {
+    background-color: #5d6160;
+}
+
+/* --------------IMAGE-------------- */
+.chair-images {
+    position: fixed;
+    top: 100px;
+    left: 500px;
+    opacity: 0;
+    width: 500px;
+    height: 410px;
+    /* border: 1px solid black; */
+    background-size: cover;
+}
+
+#chair-image-1 {
+    background-image: url("./media/chair1.png");
+}
+
+#chair-image-2 {
+    background-image: url("./media/chair2.png");
+}
+
+#chair-image-3 {
+    background-image: url("./media/chair3.png");
+}
+
+#chair-image-4 {
+    background-image: url("./media/chair4.png");
+}
+
+#chair-image-5 {
+    background-image: url("./media/chair5.png");
+}
+
+#chair-image-6 {
+    background-image: url("./media/chair6.png");
+}
+
+#color-radio-button-1:checked~#chair-image-1,
+#color-radio-button-2:checked~#chair-image-2,
+#color-radio-button-3:checked~#chair-image-3,
+#color-radio-button-4:checked~#chair-image-4,
+#color-radio-button-5:checked~#chair-image-5,
+#color-radio-button-6:checked~#chair-image-6 {
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0) rotate(-1deg);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0) rotate(2deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-3px, 0, 0) rotate(-3deg);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(3px, 0, 0) rotate(3deg);
+    }
