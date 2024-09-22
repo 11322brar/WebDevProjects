@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --glassbg: rgba(255, 255, 255, 0.13)
+}
+
+
