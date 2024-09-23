@@ -18,7 +18,7 @@ let intervalControl;
 function expandDropdown() {
     document.getElementById("festival-selector").size = 10;
 }
-
+// check
 function collapseDropdown() {
     document.getElementById("festival-selector").size = 1;
 }
