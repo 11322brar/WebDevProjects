@@ -1,17 +1,19 @@
 html {
     height: 100%;
-    background: linear-gradient(#123 30%, #667);
+    background: linear-gradient(#123 50%, #667);
     overflow: hidden;
 }
 
 .glassmorphed {
-    background: rgba(255, 255, 255, 0.17);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.4px);
-    -webkit-backdrop-filter: blur(6.4px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(9px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 1;
 }
+
+
 
 .snow,
 .snow:before,
@@ -28,7 +30,7 @@ html {
 }
 
 .snow {
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .snow:after {

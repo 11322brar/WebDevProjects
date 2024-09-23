@@ -2,4 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-
+::-webkit-datetime-edit{ background-color: #2a3949}

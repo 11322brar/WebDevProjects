@@ -11,28 +11,23 @@
     <style></style>
   </head>
   <body>
-    <div class="snow"></div>
     <!-- wrapper -->
     <div class="flex h-screen w-screen items-center justify-center">
       <!-- container -->
-      <div class="glassmorphed h-1/2 w-1/2 p-4 flex-col flex items-center">
+      <div
+        class="glassmorphed text-white text-lg h-1/2 w-1/2 p-4 flex-col flex items-center bg-heading-gradient"
+      >
         <!-- >heading -->
-        <h1 class="text-4xl">Countdown Timer</h1>
+        <h1 class="text-4xl font-semibold">Countdown Timer</h1>
 
         <!-- user input -->
         <section class="flex my-8 gap-20">
           <!-- Festivals Selector -->
           <section class="flex flex-col">
-            <label class="self-center" for="festival-selector"
+            <label class="self-center mb-2 text-xl font-semibold"" for="festival-selector"
               >Popular Festivals</label
             >
-            <!-- <select
-              class=""
-              id="festival-selector"
-              onfocus="this.size=10;"
-              onchange="this.size=1; this.blur();"
-            > -->
-            <select id="festival-selector">
+            <select id="festival-selector" class="bg-[#2a3949]">
               <option value="" disabled selected>Select a Festival</option>
               <option value="Christmas">Christmas</option>
               <option value="Diwali">Diwali</option>
@@ -50,56 +45,95 @@
             </select>
           </section>
 
-          <section class="flex flex-col">
-            <label for="end-date">Custom End Date</label>
-            <input type="date" id="custom-end-date" min="2024-01-02" />
-            <button id="button-custom-end-date">Start Timer</button>
+          <section>
+            <!-- label -->
+            <label for="end-date" class="mb-2 text-xl font-semibold block">Custom End Date</label>
+            <!-- date and button -->
+            <div class="flex items-center">
+              <input type="date" id="custom-end-date" min="2024-01-02" />
+              <button id="button-custom-end-date" class=" ml-2 hover:scale-105 drop-shadow-xl">
+
+                <img src="media/arrow.png" class="size-8 rotate-180	">
+            </div>
+            </button>
           </section>
         </section>
 
         <!-- Timer boxes -->
         <section class="flex gap-8">
           <div
-            class="h-16 w-16 border-dotted border-2 border-black overflow-hidden flex flex-col items-center"
+            class="h-28 w-28 border-solid overflow-hidden flex flex-col items-center"
           >
-            <span id="months">00</span>Months
+            <span class="text-6xl" id="months">0</span>Months
           </div>
           <div
-            class="h-16 w-16 border-dotted border-2 border-black overflow-hidden flex flex-col items-center"
+            class="h-28 w-28 border-dotted overflow-hidden flex flex-col items-center"
           >
-            <span id="days">00</span>Days
+            <span class="text-6xl" id="days">0</span>Days
           </div>
           <div
-            class="h-16 w-16 border-dotted border-2 border-black overflow-hidden flex flex-col items-center"
+            class="h-28 w-28 border-dotted overflow-hidden flex flex-col items-center"
           >
-            <span id="hours">00</span>Hours
+            <span class="text-6xl" id="hours">0</span>Hours
           </div>
           <div
-            class="h-16 w-16 border-dotted border-2 border-black overflow-hidden flex flex-col items-center"
+            class="h-28 w-28 border-dotted overflow-hidden flex flex-col items-center"
           >
-            <span id="minutes">00</span>Minutes
+            <span class="text-6xl" id="minutes">0</span>Minutes
           </div>
           <div
-            class="h-16 w-16 border-dotted border-2 border-black overflow-hidden flex flex-col items-center"
+            class="h-28 w-28 border-dotted overflow-hidden flex flex-col items-center"
           >
-            <span id="seconds" S>00</span>Seconds
+            <span class="text-6xl" id="seconds" S>0</span>Seconds
           </div>
         </section>
 
-        <!-- progress bar -->
-        <!-- <section class="my-8">
-          Empty white space
-          <div
-            class="h-1/2 w-1/2 bg-transparent border-dotted border-2 border-black relative">
-            
-          filled green space
-            <div class="h-full w-1/2 bg-lime-400 absolute top-0">
+        <!-- progress bar  -->
+        <section class="w-full">
+          <!-- Empty white space -->
+          <div class="my-2 h-1 w-10/12 m-auto bg-slate-200 rounded-2xl overflow-hidden relative">
+
+            <div class="h-full w-1/2 bg-lime-400 absolute top-0 left-0">
             </div>
           </div>
-        </section> -->
+        </section>
       </div>
     </div>
-
+    <div class="snow"></div>
     <script src="script.js"></script>
   </body>
 </html>
+
+
+
+
+<!-- Remove Extra Quotation Marks:
+
+In the <label> tag for the festival selector, there is an extra quotation mark after font-semibold. This can lead to unexpected behavior or errors in rendering. Ensure that all attributes are correctly formatted to maintain clean and valid HTML.
+Correct the Button Structure:
+
+The closing </button> tag is incorrectly placed after the <div> containing the image. The button should wrap the entire content, including the image. This will ensure the button is clickable for the entire area, improving user experience.
+Set a Default Background Color:
+
+If your container has a transparent background, consider setting a default background color. This will enhance visibility and make it clearer against the snow effect or any other background, especially in low-contrast situations.
+Ensure Accessibility with Select Options:
+
+Add an aria-label to the <select> element for better accessibility. This will help screen readers convey the purpose of the dropdown, making your site more usable for people with disabilities.
+Add Alternative Text for Images:
+
+Ensure that the <img> tag has an alt attribute to describe the image. This is important for accessibility, as it provides context to users who may not be able to see the image.
+Use Semantic HTML:
+
+Consider using more semantic tags like <header>, <main>, or <footer> to structure your HTML. This improves the document's readability for both developers and search engines, enhancing SEO and accessibility.
+Add a Fallback for the Date Input:
+
+If the browser doesn’t support the <input type="date">, consider adding a fallback method for users. You could include a simple text input with a placeholder to guide users on the expected format.
+Consistent Use of Tailwind Classes:
+
+Ensure consistent application of Tailwind CSS utility classes, especially for margins and paddings. Review your design to maintain uniform spacing, which enhances the overall aesthetic and user experience.
+Fix the Span Element:
+
+The <span id="seconds" S> has an extraneous "S" at the end. This could cause confusion and potential issues in JavaScript targeting. Ensure that HTML elements are correctly formatted to avoid runtime errors.
+Check for JavaScript Functionality:
+
+Since you have a script included, ensure that all elements the script interacts with are available and correctly referenced. This will prevent potential runtime errors and ensure the countdown timer functions as expected. -->

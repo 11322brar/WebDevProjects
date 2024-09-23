@@ -41,6 +41,7 @@ console.log('customDateSelector:', customDateSelector.outerHTML)
 let tomorrowDate = getTomorrowDate();
 // console.log('todayDate:', todayDate)
 customDateSelector.setAttribute("min", tomorrowDate)
+customDateSelector.defaultValue = tomorrowDate;
 console.log('customDateSelector.outerHTML:', customDateSelector.outerHTML)
 
 function getTomorrowDate() {
@@ -110,5 +111,34 @@ function timer(endDate) {
 
 
 
+// Use const and let Consistently:
 
+// Ensure you use const for variables that don’t change (like festivals, oneMonth, oneDay, etc.) and let for those that do (like intervalControl, remainingTime, etc.). This enhances readability and helps avoid accidental reassignments.
+// Check for searchResult Existence:
+
+// Before using searchResult in getSelectedFestivalName, check if it's null or undefined. If the festival isn't found, attempting to access properties of searchResult can lead to runtime errors. This will improve robustness and error handling.
+// Simplify Date Validation:
+
+// Instead of comparing customEndDate to the string 'Invalid Date', use isNaN(customEndDate.getTime()). This is a more standard way to check for valid dates and will simplify your validation logic.
+// Extract Common Logic for Timer Calculation:
+
+// Consider extracting the logic for calculating remainingMonths, remainingDays, etc., into a separate function. This can enhance code reusability and keep the timer function cleaner and easier to understand.
+// Add Comments for Clarity:
+
+// While some parts of the code have comments, adding more detailed explanations for complex logic (like the time conversion calculations) will help other developers (and future you) understand the intent and flow of the code better.
+// Optimize setInterval Management:
+
+// When stopping the timer with clearInterval, ensure that intervalControl is properly set to null afterward. This can prevent accidental multiple intervals from being created if the timer is started multiple times.
+// Consider Using Template Literals:
+
+// When setting the text content for the timer display, consider using template literals for better readability. For example, instead of concatenating strings, you can format it directly within backticks, which improves code clarity.
+// Refactor the getTomorrowDate Function:
+
+// The getTomorrowDate function can be simplified by directly returning the formatted date string instead of using intermediate variables. This makes the function more concise and focused.
+// Use Event Delegation for Future Scalability:
+
+// Instead of directly attaching event listeners to individual elements, consider using event delegation on a parent container. This can simplify your code if you plan to add more interactive elements in the future.
+// Modularize Your Code:
+
+// If this JavaScript grows, consider separating different functionalities into modules or files. For example, you could have one file for handling the countdown logic and another for event listeners. This will enhance maintainability and readability as your project expands.
 
