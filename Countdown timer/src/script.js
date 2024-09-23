@@ -15,27 +15,43 @@ const festivals = [
 ];
 let intervalControl;
 
+function expandDropdown() {
+    document.getElementById("festival-selector").size = 10;
+}
 
-//gets festival name from user and it's date from festivals object
+function collapseDropdown() {
+    document.getElementById("festival-selector").size = 1;
+}
+
 festivalSelector = document.getElementById('festival-selector');
 festivalSelector.addEventListener('click', getSelectedFestivalName)
+
+//gets festival name from user and it's date from festivals object then calls start timer function
 function getSelectedFestivalName() {
-    if(intervalControl)clearInterval(intervalControl);
-    let selectedFestivalName = document.getElementById("festival-selector").value;
+    clearInterval(intervalControl); //stop any previous running timer
+    let selectedFestivalName = festivalSelector.value;
     let searchResult = festivals.find((key) => key.festivalName.toLowerCase() == selectedFestivalName.toLowerCase())
     let selectedFestivalDate = new Date(searchResult.date).getTime()
-    console.log('selectedFestivalDate:', selectedFestivalDate)
     startTimer(selectedFestivalDate);
 }
 
 
+let customDateSelector = document.getElementById("custom-end-date")
+console.log('customDateSelector:', customDateSelector.outerHTML)
+let tomorrowDate = getTomorrowDate();
+// console.log('todayDate:', todayDate)
+customDateSelector.setAttribute("min", tomorrowDate)
+console.log('customDateSelector.outerHTML:', customDateSelector.outerHTML)
 
+function getTomorrowDate() {
+    const today = new Date();
+    today.setDate(today.getDate() + 1); // Add 1 day to the current date
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-based, so we add 1
+    const day = String(today.getDate()).padStart(2, '0');
 
-
-
-
-
-
+    return `${year}-${month}-${day}`;
+}
 
 
 
@@ -45,9 +61,11 @@ function getSelectedFestivalName() {
 customDateButton = document.getElementById('button-custom-end-date');
 customDateButton.addEventListener('click', getCustomDate)
 function getCustomDate() {
-    if(intervalControl)clearInterval(intervalControl);
-    let customEndDate = new Date(document.getElementById("custom-end-date").value);
-    startTimer(customEndDate.getTime());
+    clearInterval(intervalControl);
+    let customEndDate = new Date(customDateSelector.value);
+    console.log('customEndDate:', customEndDate)
+    if (customEndDate == 'Invalid Date') alert("Choose Date")
+    else startTimer(customEndDate.getTime());
 }
 
 //runs timer function every second

@@ -6,46 +6,59 @@
     <title>Document</title>
     <link href="./output.css" rel="stylesheet" />
     <link href="./input.css" rel="stylesheet" />
+    <link href="./glass-bganimation.css" rel="stylesheet" />
+
     <style></style>
   </head>
   <body>
+    <div class="snow"></div>
     <!-- wrapper -->
     <div class="flex h-screen w-screen items-center justify-center">
       <!-- container -->
-      <div
-        class="h-1/2 w-1/2 rounded-xl border-dotted border-2 border-black flex-col flex items-center bg-[--glassbg]"
-      >
+      <div class="glassmorphed h-1/2 w-1/2 p-4 flex-col flex items-center">
         <!-- >heading -->
         <h1 class="text-4xl">Countdown Timer</h1>
 
         <!-- user input -->
-        <section>
-          <select id="festival-selector" required>
-            <option value="" disabled selected>Select a Festival</option>
-            <option value="Christmas">Christmas</option>
-            <option value="Diwali">Diwali</option>
-            <option value="Dussehra">Dussehra</option>
-            <option value="Eid al-Fitr">Eid al-Fitr</option>
-            <option value="Ganesh Chaturthi">Ganesh Chaturthi</option>
-            <option value="Good Friday">Good Friday</option>
-            <option value="Holi">Holi</option>
-            <option value="Lohri">Lohri</option>
-            <option value="Maha Shivaratri">Maha Shivaratri</option>
-            <option value="Makar Sankranti">Makar Sankranti</option>
-            <option value="New Year">New Year</option>
-            <option value="Raksha Bandhan">Raksha Bandhan</option>
-            <option value="Republic Day">Republic Day</option>
-          </select>
+        <section class="flex my-8 gap-20">
+          <!-- Festivals Selector -->
+          <section class="flex flex-col">
+            <label class="self-center" for="festival-selector"
+              >Popular Festivals</label
+            >
+            <!-- <select
+              class=""
+              id="festival-selector"
+              onfocus="this.size=10;"
+              onchange="this.size=1; this.blur();"
+            > -->
+            <select id="festival-selector">
+              <option value="" disabled selected>Select a Festival</option>
+              <option value="Christmas">Christmas</option>
+              <option value="Diwali">Diwali</option>
+              <option value="Dussehra">Dussehra</option>
+              <option value="Eid al-Fitr">Eid al-Fitr</option>
+              <option value="Ganesh Chaturthi">Ganesh Chaturthi</option>
+              <option value="Good Friday">Good Friday</option>
+              <option value="Holi">Holi</option>
+              <option value="Lohri">Lohri</option>
+              <option value="Maha Shivaratri">Maha Shivaratri</option>
+              <option value="Makar Sankranti">Makar Sankranti</option>
+              <option value="New Year">New Year</option>
+              <option value="Raksha Bandhan">Raksha Bandhan</option>
+              <option value="Republic Day">Republic Day</option>
+            </select>
+          </section>
 
-          <section>
+          <section class="flex flex-col">
             <label for="end-date">Custom End Date</label>
-            <input type="date" id="custom-end-date" />
-            <button id="button-custom-end-date">Track custom date</button>
+            <input type="date" id="custom-end-date" min="2024-01-02" />
+            <button id="button-custom-end-date">Start Timer</button>
           </section>
         </section>
 
         <!-- Timer boxes -->
-        <section class="flex gap-4">
+        <section class="flex gap-8">
           <div
             class="h-16 w-16 border-dotted border-2 border-black overflow-hidden flex flex-col items-center"
           >
